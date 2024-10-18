@@ -24,11 +24,58 @@
          <!-- ===================================================================================
                                        Header Area Start 
          =====================================================================================-->
-         <?php 
-         ?>
+              
          <header>
             <div class="header-area <?=$banner?>">
                <div class="container">
+                  <div class="row">
+                     <div class="header-main">
+                        <div class="header-menu">
+                           <div class="header-logo">
+                              <a href="/"><img src="<?=$root?>assets/images/logo.png" alt="logo-img"/></a>
+                           </div>
+                           <div class="header-nav">
+                              <nav>
+                                 <ul>
+                                    <?php if($page!=="home"){?><li><a href="/">Home</a></li><?php } ?>
+                                    <li><a href="/?page=about">About</a></li>
+                                    <li><a href="/?page=documents">Documents</a></li>
+                                    <li><a href="/?page=members">Members</a></li>
+                                    <li><a href="/?page=contact">Contact us</a></li>
+                                    <li>
+                                    <div class="profile-menu">
+                                      <img src="<?=$root?><?=($_SESSION['uppic']??'assets/images/default-avatar.png')?>" alt="Profile" class="profile-placeholder">
+                                      <div class="dropdown-content">
+                                          <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+                                              <a href="/?page=profile&uid=<?=$_SESSION['uid']?>">Profile</a>
+                                              <a href="logout.php" class="logout-button">Logout</a>
+                                          <?php else: ?>
+                                              <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                                              <a href="<?=($page!=='register'?'/?page=register':'#')?>"> JOIN US </a>
+                                          <?php endif; ?>
+                                      </div>
+                                    </div></li>
+                                 </ul>
+                              </nav>
+                           </div>
+                        </div>
+                        <form action="" method="GET" class="search_box">
+                           <input type="hidden" name="page" value="members">
+                           <input type="search" id="search_Id" placeholder="Search" name="q">
+                        </form>
+                        <div class="mobile-menu">
+                           <div id="nav-icon" class="menu_icon">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <!-- Banner_Area -->
+                     <div class="banner_area">
+                     </div>
+                  </div>
                </div>
             </div>
          </header>
