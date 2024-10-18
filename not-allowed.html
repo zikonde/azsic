@@ -6,12 +6,37 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Not Allowed</title>
    <!-- Style Css -->
-   <link rel="stylesheet" href="<?=$root?>assets/css/style.css">
+   <link rel="stylesheet" href="https://azsic.zikonde.com/assets/css/style.css">
    <!-- Favicon -->
-   <link rel="icon" type="image/x-icon" href="<?=$root?>assets/images/logo.ico">
+   <link rel="icon" type="image/x-icon" href="https://azsic.zikonde.com/assets/images/logo.ico">
 </head>
-    <body style="text-align: center;margin-top: 100px;">
-        <div">
+      <body oncontextmenu="return false">
+          <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-body">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+      
+         <!-- ===================================================================================
+                                       Header Area Start 
+         =====================================================================================-->
+         <?php 
+         ?>
+         <header>
+            <div class="header-area <?=$banner?>">
+               <div class="container">
+               </div>
+            </div>
+         </header>
+         <!-- ===================================================================================
+                                       Header Area End 
+         =====================================================================================-->
+      
+         <div">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" style="visibility: visible; max-width: 400px;">
                 <g>
                   <defs>
@@ -218,6 +243,70 @@
             margin-top: 20px;
         ">Not Allowed</div>
         </div"><div></div>
+         
+         <!-- ===================================================================================
+                                       Footer Area Start 
+         =====================================================================================-->
+         <footer class="footer_area">
+            <div class="container">
+               <div class="row">
+                  <div class="footer_main">
+                     <div class="footer_title">
+                        <h2 class="heading_2">Embassy Contact</h2>
+                     </div>
+                     <div class="footer_content">
+                        <div class="footer_left">
+                           <div class="contact_address">
+                              <div class="contact_name">
+                                 <p>Ms. Linda</p>
+                                 <p>Email</p>
+                                 <p>Location</p>
+                              </div>
+                              <div class="contact_link">
+                                 <a href="tel:+8618500833384">18500833384</a>
+                                 <a href="mailto:lindaohale02@gmail.com">lindaohale02@gmail.com</a>
+                                 <a href="https://g.co/kgs/Kzojnf8" target="_blank">Beijing Embassy</a>
+                              </div>
+                           </div>
       
-    </body>
+                           <p class="contact_address2">Mr. Jeremiah Kapata <a href="tel:+8618529189885">18529189885</a></p>
+      
+                           <div class="contact_address">
+                              <div class="contact_name">
+                                 <p>Email:</p>
+                                 <p>Location</p>
+                              </div>
+                              <div class="contact_link">
+                                 <a href="mailto:kapatajeremiah@gmail.com">kapatajeremiah@gmail.com</a>
+                                 <a href="https://maps.google.com/maps/dir//Huan+Shi+Dong+Lu+Guang+Dong+Sheng+China/@23.13454,113.3093,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x340387c63aa81d95:0x30e3294a79ca4b92" target="_blank">Guangzhou Consulate</a>
+                              </div>
+                           </div>
+                           
+                        </div>
+                        <div class="footer_right">
+                           <p>Hours of Operation</p>
+                           <span>Monday to Thursday: 8:00 am - 5:00 pm and <br></span>
+                           <span>Friday: 8:00 am - 12:30 pm</span>
+                        </div>
+                     </div>
+                     <div class="footer_copy_right">
+                        <div class="footer_logo">
+                           <a href="https://zikonde.com" target="_blank"><img src="https://zikonde.com/assets/img/logo.png" alt="logo"> </a>
+                          
+                           <img src="https://azsic.zikonde.com/assets/images/plus.png" alt="logo">
+      
+                           <img src="https://azsic.zikonde.com/assets/images/logo.png" alt="logo">
+                           
+                           <img src="https://azsic.zikonde.com/assets/images/plus.png" alt="logo">
+                           
+                           <img src="https://azsic.zikonde.com/assets/images/PPI-Logo.png" alt="logo">
+                        </div>
+                        &nbsp;
+                        <p>&copy; All Rights Reserved <?=date("Y");?></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </body>
 </html>
