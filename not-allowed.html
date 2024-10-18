@@ -10,7 +10,7 @@
    <!-- Favicon -->
    <link rel="icon" type="image/x-icon" href="https://azsic.zikonde.com/assets/images/logo.ico">
 </head>
-      <body oncontextmenu="return false">
+      <body oncontextmenu="return false" style="text-align: center;margin-top: 100px;">
           <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                   <div class="modal-content">
@@ -32,31 +32,7 @@
                      <div class="header-main">
                         <div class="header-menu">
                            <div class="header-logo">
-                              <a href="/"><img src="<?=$root?>assets/images/logo.png" alt="logo-img"/></a>
-                           </div>
-                           <div class="header-nav">
-                              <nav>
-                                 <ul>
-                                    <?php if($page!=="home"){?><li><a href="/">Home</a></li><?php } ?>
-                                    <li><a href="/?page=about">About</a></li>
-                                    <li><a href="/?page=documents">Documents</a></li>
-                                    <li><a href="/?page=members">Members</a></li>
-                                    <li><a href="/?page=contact">Contact us</a></li>
-                                    <li>
-                                    <div class="profile-menu">
-                                      <img src="<?=$root?><?=($_SESSION['uppic']??'assets/images/default-avatar.png')?>" alt="Profile" class="profile-placeholder">
-                                      <div class="dropdown-content">
-                                          <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-                                              <a href="/?page=profile&uid=<?=$_SESSION['uid']?>">Profile</a>
-                                              <a href="logout.php" class="logout-button">Logout</a>
-                                          <?php else: ?>
-                                              <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-                                              <a href="<?=($page!=='register'?'/?page=register':'#')?>"> JOIN US </a>
-                                          <?php endif; ?>
-                                      </div>
-                                    </div></li>
-                                 </ul>
-                              </nav>
+                              <a href="/"><img src="https://azsic.zikonde.com/assets/images/logo.png" alt="logo-img"/></a>
                            </div>
                         </div>
                         <form action="" method="GET" class="search_box">
